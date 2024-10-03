@@ -30,14 +30,14 @@ function useBlog() {
   };
 
   const fetchBlogs = async () => {
-    const res = await fetch("http://localhost:5000/api");
+    const res = await fetch("https://blog-backend-drak.onrender.com/api");
     const blogs = await res.json();
 
     setBlogs(blogs?.data);
   };
 
   const createBlog = async (blogData) => {
-    const response = await fetch("http://localhost:5000/api", {
+    const response = await fetch("https://blog-backend-drak.onrender.com/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function useBlog() {
   };
 
   const updateBlog = async (blogData, id) => {
-    const response = await fetch(`http://localhost:5000/api/${id}`, {
+    const response = await fetch(`https://blog-backend-drak.onrender.com/api/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +75,7 @@ function useBlog() {
   };
 
   const deleteBlog = async (id) => {
-    const response = await fetch(`http://localhost:5000/api/${id}`, {
+    const response = await fetch(`https://blog-backend-drak.onrender.com/api/${id}`, {
       method: "DELETE",
     });
 
