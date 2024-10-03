@@ -5,6 +5,7 @@ import useBlog from "@/hooks/useBlog";
 import BlogDetailPopup from "@/components/BlogDetailPopup";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loader from "@/components/Loader";
 
 export default function Home(props) {
   const {
@@ -21,6 +22,7 @@ export default function Home(props) {
     viewBlog,
     deleteBlog,
     reset,
+    loading,
   } = useBlog();
 
   return (
@@ -69,6 +71,11 @@ export default function Home(props) {
       </div>
 
       <ToastContainer />
+      {loading && (
+        <div className="absolute top-0 w-[100%] h-[100%] flex justify-center items-center">
+          <Loader />
+        </div>
+      )}
     </Layout>
   );
 }

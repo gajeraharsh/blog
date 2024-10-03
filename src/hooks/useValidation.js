@@ -20,15 +20,15 @@ const useRequiredValidation = (initialValues) => {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setValues((prev) => ({ ...prev, [name]: value }));
-    // Clear error on input change
+   
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleSubmit = (event, callback) => {
     event.preventDefault();
-    const validationErrors = validateFields(); // Validate fields on submit
+    const validationErrors = validateFields(); 
 
-    // Check if there are any errors
+   
     const hasErrors = Object.values(validationErrors).some((error) => error);
 
     if (!hasErrors) {

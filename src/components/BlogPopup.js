@@ -18,8 +18,8 @@ const BlogPopup = ({ isOpen, onClose, onSubmit, reset, initialData }) => {
     }
   }, [initialData]);
 
-  const submitCallback = (data) => {
-    onSubmit(data, initialData?._id);
+  const submitCallback = async (data) => {
+    await onSubmit(data, initialData?._id);
     onClose();
     reset();
   };

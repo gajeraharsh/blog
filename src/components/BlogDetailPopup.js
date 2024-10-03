@@ -1,4 +1,3 @@
-// components/BlogDetailPopup.js
 import { formatISODate } from "@/utils/global";
 import React from "react";
 

@@ -1,4 +1,3 @@
-// components/BlogCard.js
 import { formatISODate } from "@/utils/global";
 import React from "react";
 import { MdEdit } from "react-icons/md";
@@ -11,7 +10,6 @@ const BlogCard = ({ blog, handleEdit, deleteBlog }) => {
     <div className="border p-10 rounded-lg shadow-sm hover:shadow-md transition-shadow relative">
       <h2 className="text-2xl font-bold mb-2">{name}</h2>
       
-      {/* Description container with fixed height and multiline truncation */}
       <p className="text-gray-700 mb-3 h-24 overflow-hidden line-clamp-3">
         {description}
       </p>
