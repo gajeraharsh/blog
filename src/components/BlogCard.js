@@ -4,7 +4,7 @@ import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 
 const BlogCard = ({ blog, handleEdit, deleteBlog }) => {
-  const { name, description, updatedAt } = blog;
+  const { name, description, createdAt } = blog;
 
   return (
     <div className="border p-10 rounded-lg shadow-sm hover:shadow-md transition-shadow relative">
@@ -14,7 +14,7 @@ const BlogCard = ({ blog, handleEdit, deleteBlog }) => {
         {description}
       </p>
 
-      <p className="text-sm text-gray-500">{formatISODate(updatedAt)}</p>
+      <p className="text-sm text-gray-500">{formatISODate(createdAt)}</p>
 
       <div className="absolute top-6 right-5 flex gap-3">
         <div className="cursor-pointer">

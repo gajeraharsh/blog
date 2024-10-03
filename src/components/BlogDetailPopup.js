@@ -19,7 +19,7 @@ const BlogDetailPopup = ({ isOpen, onClose, blogData }) => {
 
         <div className="mb-4">
           <p className="text-gray-600 italic text-sm">
-            Updated on: {formatISODate(blogData.updatedAt)}
+            Updated on: {formatISODate(blogData.createdAt)}
           </p>
         </div>
 
